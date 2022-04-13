@@ -185,13 +185,20 @@ console.log("Types of cuisines: ", cuisineTypes)
 function problemSeven() {
     let result = dishes.map(function(item) {return `${item.cuisine} ${item.name}`})
     return result }
+
 let foodNames = problemSeven();
 console.log("Cuisine Types and names: ", foodNames)
+
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. 
 // So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+function problemEight(arrayNames) {
+    let result = arrayNames.filter(function(item) {
+        if (item.includes("Vegetarian")) return true  })
+    return result }
 
-
+vegetarianNames = problemEight(foodNames)
+console.log("Vegetarian Cuisines: ", vegetarianNames)
 //BONUS
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
