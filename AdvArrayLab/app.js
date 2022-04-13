@@ -173,11 +173,22 @@ let cuisines = cuisineNames();
 console.log("Types of cuisines: ", cuisines)
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
+function removeDuplicates(array) {
+    let result = array.filter(function(value,index) { 
+        if (array.indexOf(value) === index ) return true })
+    return result }
 
+let cuisineTypes = removeDuplicates(cuisines);
+console.log("Types of cuisines: ", cuisineTypes)
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
-
-//8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
+function problemSeven() {
+    let result = dishes.map(function(item) {return `${item.cuisine} ${item.name}`})
+    return result }
+let foodNames = problemSeven();
+console.log("Cuisine Types and names: ", foodNames)
+//8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. 
+// So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
 
