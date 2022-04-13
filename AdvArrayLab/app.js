@@ -109,12 +109,7 @@ function findMexicanFood(){
         if(el.cuisine === "Mexican"){
             return true;
         }
-        else{
-            return false;
-        }})
-
-    //Debug tip: Place a Breakpoint on the return AFTER the filter, then hover over "results" to see results of filter without having to step through the whole thing!
-
+    })
     return results;
 }
 
@@ -128,14 +123,9 @@ console.log('Mexican Foods: ', mexicanFood)
 
 function problemOne(){
     let results = dishes.filter(function(element) {
-        if (element.cuisine === "Vegetarian") {
-            return true;
-        }
-        else {
-            return false;
-        }})
-    return results;
-}
+        if (element.cuisine === "Vegetarian") return true;})
+    return results }
+
 let vegetarianFood = problemOne();
 console.log('Vegetarian: ', vegetarianFood)
 
@@ -143,28 +133,18 @@ console.log('Vegetarian: ', vegetarianFood)
 //Filter
 function problemTwo() {
     let results = dishes.filter(function(element) {
-        if (element.cuisine === "Italian" && element.servings > 5) {
-            return true;
-        }
-        else {
-            return false;
-        }})
-    return results;   
-}
+        if (element.cuisine === "Italian" && element.servings > 5) return true;})
+    return results }
+
 let italianFood = problemTwo();
 console.log("Italian Food with a serving size greater than 5: ", italianFood)
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
 function problemThree() {
     let results = dishes.filter(function(element) {
-        if (element.id === element.servings) {
-            return true;
-        }
-        else {
-            return false;
-        }})
-    return results
-}
+        if (element.id === element.servings) return true;})
+    return results }
+
 let servingsMatchId = problemThree();
 console.log("Dishes that servings match the dish id: ", servingsMatchId)
 
@@ -172,14 +152,9 @@ console.log("Dishes that servings match the dish id: ", servingsMatchId)
 //Filter
 function problemFour() {
     let results = dishes.filter(function(element) {
-        if (element.servings % 2 == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }})
-    return results
-}
+        if (element.servings % 2 == 0) return true;})
+    return results }
+
 let evenServings = problemFour();
 console.log("Even Servings: ", evenServings)
 
@@ -187,25 +162,17 @@ console.log("Even Servings: ", evenServings)
 //Filter
 function problemFive() {
     let results = dishes.filter(function(item){
-        item.ingredients.sort()
-        if (item.ingredients[0] === "cheese" && item.ingredients[1] === "tomato") {
-            return true;
-        }
-        else {
-            return false;
-        }})
-    return results 
-}
-let tomatoCheeseIngredients = problemFive();
+        if (item.ingredients.includes("cheese") && item.ingredients.includes("tomato")) return true;})
+    return results }
+
+let tomatoCheeseIngredients = problemFive()
 console.log("Dishes with the ingredients of tomato and cheese: ", tomatoCheeseIngredients)
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 function cuisineNames() {
-    let result = dishes.map(function(element) {
-        return element.cuisine;
-    })
-    return result;
-}
+    let result = dishes.map(function(element) {return element.cuisine;})
+    return result }
+    
 let cuisines = cuisineNames(); 
 console.log("Types of cuisines: ", cuisines)
 // BONUS: (come back to this after finishing all)
