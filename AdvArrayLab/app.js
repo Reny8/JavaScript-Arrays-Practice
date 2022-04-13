@@ -106,12 +106,8 @@ let dishes = [
 //Example function
 function findMexicanFood(){
     let results = dishes.filter(function(el){
-        if(el.cuisine === "Mexican"){
-            return true;
-        }
-    })
-    return results;
-}
+        if(el.cuisine === "Mexican") return true })
+    return results }
 
 let mexicanFood = findMexicanFood();
 console.log('Mexican Foods: ', mexicanFood)
@@ -123,7 +119,7 @@ console.log('Mexican Foods: ', mexicanFood)
 
 function problemOne(){
     let results = dishes.filter(function(element) {
-        if (element.cuisine === "Vegetarian") return true;})
+        if (element.cuisine === "Vegetarian") return true })
     return results }
 
 let vegetarianFood = problemOne();
@@ -133,7 +129,7 @@ console.log('Vegetarian: ', vegetarianFood)
 //Filter
 function problemTwo() {
     let results = dishes.filter(function(element) {
-        if (element.cuisine === "Italian" && element.servings > 5) return true;})
+        if (element.cuisine === "Italian" && element.servings > 5) return true })
     return results }
 
 let italianFood = problemTwo();
@@ -142,7 +138,7 @@ console.log("Italian Food with a serving size greater than 5: ", italianFood)
 //Filter
 function problemThree() {
     let results = dishes.filter(function(element) {
-        if (element.id === element.servings) return true;})
+        if (element.id === element.servings) return true })
     return results }
 
 let servingsMatchId = problemThree();
@@ -152,7 +148,7 @@ console.log("Dishes that servings match the dish id: ", servingsMatchId)
 //Filter
 function problemFour() {
     let results = dishes.filter(function(element) {
-        if (element.servings % 2 == 0) return true;})
+        if (element.servings % 2 == 0) return true })
     return results }
 
 let evenServings = problemFour();
@@ -162,7 +158,7 @@ console.log("Even Servings: ", evenServings)
 //Filter
 function problemFive() {
     let results = dishes.filter(function(item){
-        if (item.ingredients.includes("cheese") && item.ingredients.includes("tomato")) return true;})
+        if (item.ingredients.includes("cheese") && item.ingredients.includes("tomato")) return true })
     return results }
 
 let tomatoCheeseIngredients = problemFive()
@@ -170,9 +166,9 @@ console.log("Dishes with the ingredients of tomato and cheese: ", tomatoCheeseIn
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 function cuisineNames() {
-    let result = dishes.map(function(element) {return element.cuisine;})
+    let result = dishes.map(function(element) {return element.cuisine })
     return result }
-    
+
 let cuisines = cuisineNames(); 
 console.log("Types of cuisines: ", cuisines)
 // BONUS: (come back to this after finishing all)
