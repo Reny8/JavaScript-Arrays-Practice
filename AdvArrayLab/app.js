@@ -188,7 +188,7 @@ console.log("Even Servings: ", evenServings)
 function problemFive() {
     let results = dishes.filter(function(item){
         item.ingredients.sort()
-        if (item.ingredients[0] == "cheese" && item.ingredients[1] == "tomato") {
+        if (item.ingredients[0] === "cheese" && item.ingredients[1] === "tomato") {
             return true;
         }
         else {
