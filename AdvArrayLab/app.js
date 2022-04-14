@@ -224,3 +224,16 @@ let totalServings = problemTen(servings);
 console.log("Total Servings Count: ", totalServings)
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+
+// function cuisineByType(types) {
+//     let newArray = [];
+//     for (let index = 0; index <types.length; index ++) {
+//         if ( newArray.indexOf(types[index] === -1))
+//             newArray.push(types[index]) 
+//         }
+//     return newArray
+// }
+
+// let filtedByCuisines = cuisineByType(cuisines)
+// console.log(filtedByCuisines)
